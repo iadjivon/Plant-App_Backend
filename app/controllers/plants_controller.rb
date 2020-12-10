@@ -17,6 +17,18 @@ class PlantsController < ApplicationController
         end
     end 
 
+    def update
+        plant = Plant.find(params[:id])
+        plant.update(plant_params)
+        render(json: {plant: plant})
+    end 
+
+    def destroy
+        plant =Plant.destroy(params[:id])
+        render(status: 204)
+    end 
+
+
     private 
     def plant_params
         params.required(:plant).permit(:plant_name, :description, :image, :pet_name)

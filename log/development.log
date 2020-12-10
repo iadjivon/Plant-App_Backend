@@ -213,3 +213,206 @@ Processing by PlantsController#show as HTML
 Completed 200 OK in 12ms (Views: 0.6ms | ActiveRecord: 7.4ms | Allocations: 716)
 
 
+Started GET "/plants" for 127.0.0.1 at 2020-12-10 00:03:15 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (2.9ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 74ms (Views: 22.5ms | ActiveRecord: 43.7ms | Allocations: 4379)
+
+
+Started POST "/plants" for ::1 at 2020-12-10 00:09:38 -0500
+Processing by PlantsController#create as */*
+  Parameters: {"plant"=>{"plant_name"=>"Opuntia Microdasys - Bunny Ears", "description"=>"A most attractive cactus, Opuntia microdays(Bunny ears) is a bushy, perennial cactus with oval to round, flattened, small pads, up to 6 inches (15cm) across. Red when new, the pads appear in pairs, like the ears of a rabbit, and mature to a soft, velvety green as they grow. ", "image"=>"https://cdn.shopify.com/s/files/1/2318/5061/files/blog_1_d803fb72-1281-4bc6-9dd0-235108bc05df.jpg?v=1566975565", "pet_name"=>"Bunny"}}
+  [1m[35m (39.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:13:in `create'
+  [1m[36mPlant Create (10.6ms)[0m  [1m[32mINSERT INTO "plants" ("plant_name", "description", "image", "pet_name") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["plant_name", "Opuntia Microdasys - Bunny Ears"], ["description", "A most attractive cactus, Opuntia microdays(Bunny ears) is a bushy, perennial cactus with oval to round, flattened, small pads, up to 6 inches (15cm) across. Red when new, the pads appear in pairs, like the ears of a rabbit, and mature to a soft, velvety green as they grow. "], ["image", "https://cdn.shopify.com/s/files/1/2318/5061/files/blog_1_d803fb72-1281-4bc6-9dd0-235108bc05df.jpg?v=1566975565"], ["pet_name", "Bunny"]]
+  ↳ app/controllers/plants_controller.rb:13:in `create'
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:13:in `create'
+Completed 201 Created in 59ms (Views: 0.3ms | ActiveRecord: 53.4ms | Allocations: 2626)
+
+
+Started GET "/plants" for 127.0.0.1 at 2020-12-10 00:09:51 -0500
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (1.0ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.0ms | Allocations: 1246)
+
+
+Started GET "/plants" for 127.0.0.1 at 2020-12-10 00:24:56 -0500
+  
+SyntaxError (/Users/idaadjivon/Desktop/Destop All /TECH/seir-flex-zen-work/projects/Unit 4 - project/plant_app_api/app/controllers/plants_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/plants_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/plants_controller.rb:29: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/favicon.ico" for 127.0.0.1 at 2020-12-10 00:24:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/plants" for 127.0.0.1 at 2020-12-10 00:25:26 -0500
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (4.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 70ms (Views: 19.6ms | ActiveRecord: 44.1ms | Allocations: 4383)
+
+
+Started GET "/plants/0" for 127.0.0.1 at 2020-12-10 00:54:44 -0500
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mPlant Load (1.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:7:in `show'
+Completed 404 Not Found in 12ms (ActiveRecord: 1.7ms | Allocations: 1615)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plant with 'id'=0):
+  
+app/controllers/plants_controller.rb:7:in `show'
+Started GET "/plants/1" for 127.0.0.1 at 2020-12-10 00:54:49 -0500
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (1.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:7:in `show'
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 1.1ms | Allocations: 2937)
+
+
+Started GET "/plants/4" for 127.0.0.1 at 2020-12-10 00:55:26 -0500
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPlant Load (1.0ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:7:in `show'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 1.0ms | Allocations: 699)
+
+
+Started GET "/plants/1" for 127.0.0.1 at 2020-12-10 00:57:17 -0500
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:7:in `show'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 698)
+
+
+Started PUT "/plants/1" for ::1 at 2020-12-10 00:58:57 -0500
+Processing by PlantsController#update as */*
+  Parameters: {"plant"=>{"plant_name"=>"Aloe - Crosby's Prolific "}, "id"=>"1"}
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:21:in `update'
+Completed 500 Internal Server Error in 136ms (ActiveRecord: 0.4ms | Allocations: 60155)
+
+
+  
+NameError (undefined local variable or method `pant_params' for #<PlantsController:0x00007fdfe344bce8>
+Did you mean?  plant_params):
+  
+app/controllers/plants_controller.rb:22:in `update'
+Started PUT "/plants/1" for ::1 at 2020-12-10 00:59:49 -0500
+Processing by PlantsController#update as */*
+  Parameters: {"plant"=>{"plant_name"=>"Aloe - Crosby's Prolific "}, "id"=>"1"}
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:21:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:22:in `update'
+  [1m[36mPlant Update (7.6ms)[0m  [1m[33mUPDATE "plants" SET "plant_name" = $1 WHERE "plants"."id" = $2[0m  [["plant_name", "Aloe - Crosby's Prolific "], ["id", 1]]
+  ↳ app/controllers/plants_controller.rb:22:in `update'
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:22:in `update'
+Completed 200 OK in 67ms (Views: 0.3ms | ActiveRecord: 39.5ms | Allocations: 6156)
+
+
+Started GET "/plants/1" for 127.0.0.1 at 2020-12-10 01:00:21 -0500
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 699)
+
+
+Started PUT "/plants/1" for ::1 at 2020-12-10 01:01:54 -0500
+Processing by PlantsController#update as */*
+  Parameters: {"plant"=>{"description"=>"A  prolific miniature Aloe, an evergreen succulent with attractice, stemless rosettes of lance-shaped, deep green leaves lined with long, translucent teeth along their edges."}, "id"=>"1"}
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:21:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:22:in `update'
+  [1m[36mPlant Update (2.0ms)[0m  [1m[33mUPDATE "plants" SET "description" = $1 WHERE "plants"."id" = $2[0m  [["description", "A  prolific miniature Aloe, an evergreen succulent with attractice, stemless rosettes of lance-shaped, deep green leaves lined with long, translucent teeth along their edges."], ["id", 1]]
+  ↳ app/controllers/plants_controller.rb:22:in `update'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:22:in `update'
+Completed 200 OK in 12ms (Views: 0.7ms | ActiveRecord: 3.9ms | Allocations: 2984)
+
+
+Started GET "/plants/1" for 127.0.0.1 at 2020-12-10 01:01:59 -0500
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 699)
+
+
+Started GET "/plants/1" for 127.0.0.1 at 2020-12-10 01:03:37 -0500
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (1.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:7:in `show'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 699)
+
+
+Started GET "/plants/1" for 127.0.0.1 at 2020-12-10 01:03:43 -0500
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:7:in `show'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 699)
+
+
+Started GET "/plants" for 127.0.0.1 at 2020-12-10 01:03:46 -0500
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.7ms | Allocations: 1202)
+
+
+Started DELETE "/plants/2" for ::1 at 2020-12-10 01:05:12 -0500
+Processing by PlantsController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:27:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:27:in `destroy'
+  [1m[36mPlant Destroy (41.0ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/plants_controller.rb:27:in `destroy'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:27:in `destroy'
+Completed 204 No Content in 52ms (Views: 0.1ms | ActiveRecord: 42.7ms | Allocations: 2472)
+
+
+Started GET "/plants" for 127.0.0.1 at 2020-12-10 01:05:33 -0500
+Processing by PlantsController#index as HTML
+  [1m[36mPlant Load (2.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 2.4ms | Allocations: 1100)
+
+
