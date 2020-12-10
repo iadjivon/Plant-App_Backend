@@ -8,6 +8,13 @@ class PlantsController < ApplicationController
     end
 
     def create 
+        plant = Plant.new(plant_params)
+
+        if plant.save
+            render(status: 201, json: {plant: plant})
+        else 
+            render(staus: 422, json: {song: song})
+        end
     end 
 
     private 
