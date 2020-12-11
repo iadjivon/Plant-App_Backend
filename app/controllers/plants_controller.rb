@@ -13,7 +13,7 @@ class PlantsController < ApplicationController
         if plant.save
             render(status: 201, json: {plant: plant})
         else 
-            render(staus: 422, json: {song: song})
+            render(staus: 422, json: {plant: plant})
         end
     end 
 
