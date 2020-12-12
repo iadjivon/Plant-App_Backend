@@ -21234,3 +21234,246 @@ Processing by PlantsController#index as */*
 Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.8ms | Allocations: 1589)
 
 
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:18:36 -0500
+  
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  
+pg (1.2.3) lib/pg.rb:58:in `initialize'
+pg (1.2.3) lib/pg.rb:58:in `new'
+pg (1.2.3) lib/pg.rb:58:in `connect'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/postgresql_adapter.rb:46:in `postgresql_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:887:in `new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:931:in `checkout_new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:910:in `try_to_checkout_new_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:871:in `acquire_connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:593:in `checkout'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:437:in `connection'
+activerecord (6.0.3.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:1119:in `retrieve_connection'
+activerecord (6.0.3.4) lib/active_record/connection_handling.rb:221:in `retrieve_connection'
+activerecord (6.0.3.4) lib/active_record/connection_handling.rb:189:in `connection'
+activerecord (6.0.3.4) lib/active_record/migration.rb:562:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:19:09 -0500
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (2.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 27ms (Views: 10.0ms | ActiveRecord: 14.0ms | Allocations: 4927)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:21:28 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.8ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.8ms | Allocations: 1607)
+
+
+Started POST "/plants" for 127.0.0.1 at 2020-12-12 18:21:30 -0500
+Processing by PlantsController#create as */*
+  Parameters: {"emptyPlant"=>{"plant_name"=>"", "description"=>"", "image"=>"", "pet_name"=>""}, "plant"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 137)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: plant):
+  
+app/controllers/plants_controller.rb:34:in `plant_params'
+app/controllers/plants_controller.rb:11:in `create'
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:21:30 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (2.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 11ms (Views: 5.0ms | ActiveRecord: 2.7ms | Allocations: 1601)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:22:48 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.6ms | Allocations: 1589)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:24:44 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (5.0ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 16ms (Views: 10.7ms | ActiveRecord: 5.0ms | Allocations: 1608)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:25:14 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (2.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 2.1ms | Allocations: 1589)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:25:40 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (1.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 1.3ms | Allocations: 1607)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:26:21 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (4.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 9ms (Views: 4.0ms | ActiveRecord: 4.3ms | Allocations: 1589)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:26:28 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.6ms | Allocations: 1589)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:28:49 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (2.8ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 14ms (Views: 10.5ms | ActiveRecord: 2.8ms | Allocations: 1589)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:29:23 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.6ms | Allocations: 1589)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:30:43 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.6ms | Allocations: 1589)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:31:48 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 13ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 1590)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:32:03 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 1589)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:33:15 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 1589)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:33:31 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (1.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.3ms | Allocations: 1589)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:35:17 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.4ms | Allocations: 1590)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:35:45 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (1.8ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 1.8ms | Allocations: 1589)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:36:01 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.7ms | Allocations: 1589)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:36:13 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (1.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 1.6ms | Allocations: 1589)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:36:20 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.8ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.8ms | Allocations: 1589)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:36:42 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (3.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 3.5ms | Allocations: 1589)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:41:01 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 1589)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:41:52 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (1.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 1.3ms | Allocations: 1589)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:43:15 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 1589)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 18:43:35 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (7.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 10ms (Views: 2.4ms | ActiveRecord: 7.3ms | Allocations: 1589)
+
+
