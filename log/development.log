@@ -21842,3 +21842,18 @@ Processing by PlantsController#index as */*
 Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.5ms | Allocations: 1588)
 
 
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 19:52:31 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (1.9ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 21ms (Views: 8.6ms | ActiveRecord: 9.5ms | Allocations: 4926)
+
+
+Started GET "/plants/" for 127.0.0.1 at 2020-12-12 19:52:50 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:3:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.6ms | Allocations: 1607)
+
+
