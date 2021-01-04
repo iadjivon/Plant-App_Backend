@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# this is a test to check for push to github
+
 
 Plant.create(
     plant_name: "Aloe Crosby's Prolific", 
